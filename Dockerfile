@@ -23,3 +23,7 @@ RUN apk add --virtual deps \
     make install && \
     apk del --purge deps && \
     rm -rf ~/*
+
+COPY ngin.conf /opt/nginx/conf/nginx.conf
+
+CMD /opt/nginx/sbin/nginx -g 'daemon off; user nginx;'
