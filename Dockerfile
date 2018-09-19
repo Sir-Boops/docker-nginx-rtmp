@@ -20,5 +20,6 @@ RUN apk add --virtual deps \
       --add-module=../nginx-rtmp-module-$RTMP_VER \
       --without-http_rewrite_module && \
     make -j$(nproc) && \
+    make install && \
     apk del --purge deps && \
     rm -rf ~/*
