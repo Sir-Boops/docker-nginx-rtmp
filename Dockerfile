@@ -1,7 +1,7 @@
-FROM alpine:3.8
+FROM alpine:3.10.3
 
 # Version ENVs
-ENV NGINX_VER="1.15.3"
+ENV NGINX_VER="1.16.1"
 ENV RTMP_VER="1.2.1"
 
 RUN addgroup nginx && \
